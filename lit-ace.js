@@ -8,12 +8,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 import { LitElement, html, css } from "lit";
 
-import "@f0rce/ace-builds/src-noconflict/ace.js";
-import "@f0rce/ace-builds/src-noconflict/ext-language_tools.js";
-import "@f0rce/ace-builds/src-noconflict/ext-static_highlight.js";
-import "@f0rce/ace-builds/src-noconflict/ext-beautify.js";
-import "@f0rce/ace-builds/src-noconflict/ext-statusbar.js";
-import "@f0rce/ace-builds/src-noconflict/snippets/snippets.js";
+import "ace-builds/src-noconflict/ace.js";
+import "ace-builds/src-noconflict/ext-language_tools.js";
+import "ace-builds/src-noconflict/ext-static_highlight.js";
+import "ace-builds/src-noconflict/ext-beautify.js";
+import "ace-builds/src-noconflict/ext-statusbar.js";
+import "ace-builds/src-noconflict/snippets/snippets.js";
 
 const CUSTOM_KEYWORD = "custom";
 class LitAce extends LitElement {
@@ -159,27 +159,27 @@ class LitAce extends LitElement {
 
   async firstUpdated(changedProperties) {
     if (!ace) {
-      await import("@f0rce/ace-builds/src-noconflict/ace");
+      await import("ace-builds/src-noconflict/ace");
     }
 
     if (!ace.require("ace/ext/language_tools")) {
-      await import("@f0rce/ace-builds/src-noconflict/ext-language_tools");
+      await import("ace-builds/src-noconflict/ext-language_tools");
     }
 
     if (!ace.require("ace/ext/static_highlight")) {
-      await import("@f0rce/ace-builds/src-noconflict/ext-static_highlight");
+      await import("ace-builds/src-noconflict/ext-static_highlight");
     }
 
     if (!ace.require("ace/ext/beautify")) {
-      await import("@f0rce/ace-builds/src-noconflict/ext-beautify");
+      await import("ace-builds/src-noconflict/ext-beautify");
     }
 
     if (!ace.require("ace/ext/statusbar")) {
-      await import("@f0rce/ace-builds/src-noconflict/ext-statusbar");
+      await import("ace-builds/src-noconflict/ext-statusbar");
     }
 
     if (!ace.require("ace/snippets")) {
-      await import("@f0rce/ace-builds/src-noconflict/snippets/snippets");
+      await import("ace-builds/src-noconflict/snippets/snippets");
     }
 
     this.initialInit = true;
